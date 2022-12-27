@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+      stages {
+        stage ('PULL') {
+            steps {
+                git 'https://github.com/ganeshgohane/Jenkins.git'
+           }
+        }
+         stage ('BUILD') {
+            steps {
+                 echo 'PIPELINE BUILD SUCCESSFULLY'
+           }
+        }
+         stage ('TEST') {
+            steps {
+                echo 'PIPELINE TEST SUCCESSFULLY'
+           }
+        }
+         stage ('TEST') {
+            steps {
+                echo 'PIPELINE DEPLOY SUCCESSFULLY'
+           }
+        }
+      }
+}
